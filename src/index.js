@@ -21,8 +21,8 @@ const corsOptions = {
     optionsSuccessStatus: 200,
 }
 
-app.use(helmet())
 app.use(cors(corsOptions))
+app.use(helmet())
 app.use(express.json())
 
 route(app)
