@@ -6,23 +6,23 @@ const { appConfig } = require('./config/app')
 const cors = require('cors')
 const route = require('./routes')
 const mongoDB = require('./config/mongo')
-// const redis = require('./config/redis')
+const redis = require('./config/redis')
 
 mongoDB.connect()
 
-// redis.connect((error) => {
-//     if (error) {
-//         console.error(error)
-//     }
-// })
+redis.connect((error) => {
+    if (error) {
+        console.error(error)
+    }
+})
 
 const corsOptions = {
     origin: '*',
     optionsSuccessStatus: 200,
 }
 
-app.use(helmet())
 app.use(cors(corsOptions))
+app.use(helmet())
 app.use(express.json())
 
 route(app)

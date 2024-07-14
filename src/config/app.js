@@ -7,7 +7,7 @@ const appConfig = {
     db: {
         userName: process.env.CLOUD_DB_USERNAME,
         password: process.env.CLOUD_DB_PASSWORD,
-        url: `mongodb+srv://${process.env.CLOUD_DB_USERNAME}:${process.env.CLOUD_DB_PASSWORD}@ecommercemicro.qiqueun.mongodb.net/?retryWrites=true&w=majority&appName=EcommerceMicro`,
+        url: `mongodb+srv://ecommercemicroapp:LTjtCyKNOv0ruVwL@ecommercemicro.qiqueun.mongodb.net/?retryWrites=true&w=majority&appName=EcommerceMicro`,
     },
     db_image: {
         cloud_name: process.env.CLOUD_IMAGE_NAME,
