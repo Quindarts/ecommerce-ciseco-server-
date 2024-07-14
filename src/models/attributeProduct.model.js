@@ -15,13 +15,6 @@ const attributeProduct = new mongoose.Schema({
         type: String,
         required: true,
     },
-    avaiable: {
-        type: Number,
-    },
-    product_id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Product',
-    },
 })
 
 module.exports = mongoose.model('AttributeProduct', attributeProduct)

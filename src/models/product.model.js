@@ -22,14 +22,17 @@ const productSchema = new mongoose.Schema({
             },
         },
     ],
-    attribute_product: [
+    attributeProduct: [
         {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'AttributeProduct',
-            required: true,
+            subAttributeProduct: {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: 'AttributeProduct',
+                required: true,
+            },
+            available: {},
         },
     ],
-    total_attribute: {
+    totalAvailable: {
         type: Number,
     },
     price: {

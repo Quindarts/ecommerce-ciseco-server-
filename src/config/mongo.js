@@ -6,8 +6,6 @@ async function connect() {
         await mongoose.connect(appConfig.db.url, {
             useNewUrlParser: true,
         })
-
-        console.log('🚀 ~~~ connected to Atlas::::Ecommerce-Pet ')
     } catch (error) {
         console.log('Connect Failed Atlas!!')
     }
